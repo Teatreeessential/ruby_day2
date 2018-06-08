@@ -1,0 +1,14 @@
+
+<form action="/lol" method="post">
+<select name="option">
+    <option value="">직업선택</option>
+    <option value="op.gg">op.gg에서 보기</option>
+    <option value="here">여기서 검색</option>
+</select>
+<h1>원하시는 아이디를 넣어주세요</h1>
+<input type="text" name="id" required="true" placeholder="소환사 이름">
+<input type="submit" value="검색">
+</form>
+<% if params[:id] %>
+<h1>당신의 전적은 <%=@game%>전 <%=@win%>승 <%=@lose%>패 입니다.</h1>
+<% end %>
